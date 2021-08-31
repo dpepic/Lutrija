@@ -1,0 +1,38 @@
+﻿<Window x:Class="Lutrija.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lutrija"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<StackPanel>
+		<UniformGrid Columns="2" Name="Unos" >
+			<Label>Ime:</Label>
+			<TextBox Text="{Binding Path=Ime}"/>
+			<Label>Prezime:</Label>
+			<TextBox Text="{Binding Path=Prezime}"/>
+			<Label>Datum rodjenja: </Label>
+			<DatePicker SelectedDate="{Binding Path=Rodj}"/>
+			<Label>Broj brojeva: </Label>
+			<TextBox Text="{Binding Path=BrojBrojeva}"/>
+			<Label/>
+			<Label/>
+			<Label/>
+			<Button Content="Dalje" Click="Dalje"/>
+		</UniformGrid>
+		<StackPanel x:Name="Izvlacenje">
+			<UniformGrid Columns="2">
+				<Label>Unesite brojeve(npr 12 23 7 18)</Label>
+				<TextBox Text="{Binding Path=BrojeviUnos}"/>
+				<Label/>
+				<Button Content="Dodaj" Click="DodajBrojeve"/>
+				<Label/>
+				<Button Content="Igraj" Click="Igraj"/>
+			</UniformGrid>
+			<WrapPanel Name="mestoZaBrojeve">
+				
+			</WrapPanel>
+		</StackPanel>
+	</StackPanel>
+</Window>
